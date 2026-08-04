@@ -1,0 +1,2245 @@
+/* style.css - Custom Styling for FORTEC 2026 Presentation */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Color Variables */
+:root {
+    --bg-color: #060a17; /* Deep midnight blue */
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1; /* Silver/Light Gray */
+    --text-muted: #64748b; /* Slate Gray */
+    --accent-blue: #3b82f6; /* Modern Blue */
+    --accent-orange: #f97316; /* Energy Orange */
+    --accent-orange-glow: rgba(249, 115, 22, 0.15);
+    --border-light: rgba(255, 255, 255, 0.08);
+}
+
+/* Global Reveal.js Overrides */
+.reveal {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Dark elegant vignette overlay on the background */
+.reveal .slide-background {
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.reveal .slide-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(6, 10, 23, 0.6) 0%, rgba(6, 10, 23, 0.95) 100%),
+                linear-gradient(to bottom, rgba(6, 10, 23, 0.4) 0%, rgba(6, 10, 23, 0.8) 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Base slides adjustments */
+.reveal .slides {
+    text-align: center;
+}
+
+/* Slide 1 - Opening Executive Slide */
+.opening-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 20px 40px !important;
+    box-sizing: border-box !important;
+}
+
+/* Top Category Tag/Badge */
+.badge-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 25px;
+    padding: 6px 18px;
+    background: var(--accent-orange-glow);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    border-radius: 50px;
+    display: inline-block;
+    opacity: 0; /* Animated on present */
+}
+
+/* Title Styling */
+.slide-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 3.8rem !important;
+    line-height: 1.15 !important;
+    color: var(--text-primary) !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin: 0 0 35px 0 !important;
+    letter-spacing: -0.02em !important;
+    text-transform: none !important;
+    opacity: 0; /* Animated on present */
+}
+
+.slide-title span.accent {
+    color: var(--accent-orange);
+    position: relative;
+    display: inline-block;
+}
+
+/* Glowing underline effect under title accent */
+.slide-title span.accent::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-orange), transparent);
+    border-radius: 2px;
+}
+
+/* Glassmorphism Card for Main Text */
+.content-card {
+    background: rgba(10, 17, 40, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 35px 50px;
+    max-width: 1050px;
+    margin: 10px auto 70px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    opacity: 0; /* Animated on present */
+    position: relative;
+}
+
+/* Left vertical accent line on card */
+.content-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 4px;
+    background: var(--accent-orange);
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.main-text {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 1.55rem !important;
+    line-height: 1.65 !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+    text-align: left;
+}
+
+.main-text strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.main-text em {
+    font-style: normal;
+    color: var(--accent-orange);
+    font-weight: 500;
+}
+
+/* Slide Footer Styling */
+.slide-footer {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0; /* Animated on present */
+    z-index: 20;
+}
+
+.slide-footer::before,
+.slide-footer::after {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--text-muted));
+}
+
+.slide-footer::after {
+    background: linear-gradient(90deg, var(--text-muted), transparent);
+}
+
+/* Immediate Entrance Animations when Section is PRESENT */
+.reveal .slides section.present .badge-tag {
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.reveal .slides section.present .slide-title {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.reveal .slides section.present .content-card {
+    animation: fadeInUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+.reveal .slides section.present .slide-footer {
+    animation: fadeIn 1.5s ease-out 1.2s forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide 2 - Process Slide (Da Informação ao Valor Estratégico) */
+.process-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 20px 40px !important;
+    box-sizing: border-box !important;
+}
+
+/* Secondary Slide Title */
+.slide-title-secondary {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 3.2rem !important;
+    line-height: 1.2 !important;
+    color: var(--text-primary) !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin: 0 0 20px 0 !important;
+    letter-spacing: -0.01em !important;
+    text-transform: none !important;
+    opacity: 0; /* Animated on present */
+}
+
+/* Highlight phrase styling */
+.highlight-phrase {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 1.5rem !important;
+    line-height: 1.55 !important;
+    color: var(--text-secondary) !important;
+    max-width: 1100px;
+    margin: 0 auto 40px auto !important;
+    text-align: center;
+    opacity: 0; /* Animated on present */
+}
+
+.highlight-phrase strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.highlight-phrase span.highlight-orange {
+    color: var(--accent-orange);
+    font-weight: 500;
+}
+
+/* Flowchart Horizontal Layout */
+.flow-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: 10px auto 60px auto;
+    gap: 15px;
+}
+
+/* Flowchart Item */
+.flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 170px;
+    opacity: 0; /* Animated sequentially */
+}
+
+/* Flowchart Icon Container */
+.flow-icon {
+    width: 84px !important;
+    height: 84px !important;
+    min-width: 84px !important;
+    min-height: 84px !important;
+    max-width: 84px !important;
+    max-height: 84px !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    border-radius: 50%;
+    background: rgba(10, 17, 40, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid var(--text-muted);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.flow-icon svg {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.3s ease;
+    display: block !important;
+}
+
+.flow-item:hover .flow-icon {
+    transform: translateY(-5px);
+}
+
+.flow-item:hover .flow-icon svg {
+    transform: scale(1.1);
+}
+
+/* Flowchart Label */
+.flow-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Color Coding based on Value Stage */
+.stage-early .flow-icon {
+    border-color: var(--text-muted);
+    color: var(--text-secondary);
+}
+.stage-early .flow-label {
+    color: var(--text-secondary);
+}
+
+.stage-mid .flow-icon {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15),
+                inset 0 1px 1px rgba(59, 130, 246, 0.2);
+}
+.stage-mid .flow-label {
+    color: var(--accent-blue);
+}
+
+.stage-peak .flow-icon {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3),
+                inset 0 1px 1px rgba(249, 115, 22, 0.3);
+}
+.stage-peak .flow-label {
+    color: var(--accent-orange);
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+/* Connector Arrow */
+.flow-arrow {
+    color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 84px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    flex-shrink: 0 !important;
+    opacity: 0; /* Animated sequentially */
+}
+
+.flow-arrow svg {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    color: var(--text-muted);
+    opacity: 0.5;
+    display: block !important;
+}
+
+/* Slide 2 Sequential Animation Choreography when Section is PRESENT */
+.reveal .slides section.present .slide-title-secondary {
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.reveal .slides section.present .highlight-phrase {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* Cascade trigger for flow items inside container */
+.reveal .slides section.present .flow-container > *:nth-child(1) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(2) { animation: fadeIn 0.8s ease-out 0.7s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(3) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(4) { animation: fadeIn 0.8s ease-out 1.1s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(5) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(6) { animation: fadeIn 0.8s ease-out 1.5s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(7) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(8) { animation: fadeIn 0.8s ease-out 1.9s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(9) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.1s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(10) { animation: fadeIn 0.8s ease-out 2.3s forwards; }
+.reveal .slides section.present .flow-container > *:nth-child(11) { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards; }
+
+/* Slide 3 - Split Screen Paradigm Shift Slide */
+.split-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 30px 40px !important;
+    box-sizing: border-box !important;
+}
+
+.split-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    text-align: left;
+    justify-content: center;
+    opacity: 0; /* Animated on present */
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    width: 53%;
+    justify-content: center;
+    opacity: 0; /* Animated on present */
+}
+
+/* Slide 3 Subtitle styling */
+.slide-subtitle-sm {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: var(--accent-blue) !important;
+    margin: 0 0 25px 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+}
+
+/* Narrative text paragraph styling */
+.narrative-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.narrative-paragraphs p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 1.15rem !important;
+    line-height: 1.55 !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+}
+
+.narrative-paragraphs p strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Orange Accent Box on left column */
+.highlight-orange-box {
+    background: rgba(249, 115, 22, 0.07);
+    border-left: 4px solid var(--accent-orange);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.22rem;
+    line-height: 1.45;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 15px;
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.04);
+}
+
+.panel-title-secondary {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Glassmorphism Paradigm Comparison Container */
+.paradigm-comparison {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    background: rgba(10, 17, 40, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.paradigm-col {
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    justify-content: center;
+}
+
+.paradigm-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.col-before h4 {
+    color: var(--text-muted);
+}
+
+.col-after h4 {
+    color: var(--accent-orange);
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+/* Small Stepper Item inside comparison columns */
+.stepper-item-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 9px 12px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+.col-after .stepper-item-sm {
+    border-color: rgba(59, 130, 246, 0.12);
+}
+
+.stepper-item-sm:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.col-after .stepper-item-sm:hover {
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.12);
+}
+
+/* Stepper icons */
+.step-icon-sm {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.col-before .step-icon-sm {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+}
+
+.col-after .step-icon-sm {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+}
+
+/* Custom Highlight colors for AI and Impact icons on the right */
+.col-after .stage-ai .step-icon-sm {
+    background: rgba(249, 115, 22, 0.1);
+    color: var(--accent-orange);
+}
+
+.col-after .stage-impact .step-icon-sm {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--accent-orange);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+.step-icon-sm svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    max-width: 16px !important;
+    flex-shrink: 0;
+    display: block !important;
+}
+
+.step-text-sm {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: left;
+    line-height: 1.3;
+}
+
+.col-after .step-text-sm {
+    color: var(--text-primary);
+}
+
+/* Stepper vertical arrows */
+.stepper-arrow-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.08);
+    margin: 2px 0;
+}
+
+.stepper-arrow-sm svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    max-width: 14px !important;
+    display: block !important;
+}
+
+.col-after .stepper-arrow-sm {
+    color: rgba(59, 130, 246, 0.2);
+}
+
+/* Central Connector Section */
+.paradigm-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 12%;
+    opacity: 0; /* Animated */
+}
+
+.paradigm-connector svg {
+    color: var(--accent-orange);
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.4));
+    display: block !important;
+}
+
+.connector-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    margin-top: 40px;
+    display: inline-block;
+}
+
+/* Slide 3 Animate Entrance on PRESENT */
+.reveal .slides section.present .left-col {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.reveal .slides section.present .right-col {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+/* Inside the comparison card: column entry cascading */
+.reveal .slides section.present .col-before {
+    opacity: 0;
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+}
+
+.reveal .slides section.present .paradigm-connector {
+    animation: fadeIn 1.0s ease-out 1.4s forwards;
+}
+
+.reveal .slides section.present .col-after {
+    opacity: 0;
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+}
+
+/* Slide 4 - Ecosystem Slide (Da Proteção ao Impacto) */
+.ecosystem-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 30px 40px !important;
+    box-sizing: border-box !important;
+}
+
+/* Narrative text alignment custom style for Slide 4 */
+.narrative-paragraphs.narrow {
+    max-width: 100%;
+}
+
+/* Orange Highlight Box style for Slide 4 (Identidade com Slide 3) */
+.highlight-orange-box.slide4-box {
+    margin-top: 25px;
+}
+
+/* Ecosystem Diagram Layout Right Column */
+.ecosystem-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Nível 1: Inputs */
+.eco-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.eco-node {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    opacity: 0; /* Animated */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.eco-node svg {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+/* Nível 2: Hub Central */
+.eco-hub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 20;
+}
+
+.eco-hub-subtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0; /* Animated */
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    text-shadow: 0 0 8px rgba(249, 115, 22, 0.2);
+}
+
+.reveal .slides section.present .eco-hub-subtext {
+    animation: fadeIn 0.8s ease-out 1.3s forwards;
+}
+
+.hub-content {
+    background: rgba(10, 17, 40, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid var(--accent-blue);
+    border-radius: 14px;
+    padding: 16px 28px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25),
+                0 0 20px rgba(59, 130, 246, 0.12),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    opacity: 0; /* Animated */
+    max-width: 330px;
+    box-sizing: border-box;
+}
+
+.hub-content h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    color: var(--text-primary) !important;
+    margin: 8px 0 3px 0 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+}
+
+.hub-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-block;
+}
+
+.hub-icon {
+    color: var(--accent-blue);
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.4));
+}
+
+.hub-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    display: block !important;
+}
+
+/* Nível 3: Satélites */
+.eco-satellites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    max-width: 620px;
+    z-index: 20;
+}
+
+.sat-node {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background: rgba(10, 17, 40, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    opacity: 0; /* Animated staggered */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sat-node svg {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    max-width: 14px !important;
+    display: block !important;
+}
+
+.sat-node:hover {
+    border-color: var(--accent-orange);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.15);
+}
+
+/* Nível 4: Output / Impacto Final */
+.eco-output {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 20;
+}
+
+.output-content {
+    background: rgba(249, 115, 22, 0.08);
+    border: 2px solid var(--accent-orange);
+    border-radius: 12px;
+    padding: 14px 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 35px rgba(249, 115, 22, 0.2),
+                inset 0 1px 1px rgba(249, 115, 22, 0.15);
+    opacity: 0; /* Animated */
+}
+
+.output-content h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+.output-icon {
+    color: var(--accent-orange);
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 0 5px rgba(249, 115, 22, 0.5));
+}
+
+.output-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    display: block !important;
+}
+
+/* Conectores Verticais SVG */
+.eco-connector-v {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Animated */
+}
+
+.eco-connector-v.c1 { height: 28px; }
+.eco-connector-v.c2 { height: 32px; }
+.eco-connector-v.c3 { height: 32px; }
+
+.eco-connector-v svg {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+}
+
+/* Custom Keyframe scaleUpFadeIn */
+@keyframes scaleUpFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Slide 4 Animation Choreography inside Ecosystem */
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(1) .eco-node { 
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; 
+}
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(2) { 
+    animation: fadeIn 0.8s ease-out 0.9s forwards; 
+}
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(3) .hub-content { 
+    animation: scaleUpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards; 
+}
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(4) { 
+    animation: fadeIn 0.8s ease-out 1.4s forwards; 
+}
+
+.reveal .slides section.present .eco-satellites > *:nth-child(1) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards; }
+.reveal .slides section.present .eco-satellites > *:nth-child(2) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards; }
+.reveal .slides section.present .eco-satellites > *:nth-child(3) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards; }
+.reveal .slides section.present .eco-satellites > *:nth-child(4) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards; }
+.reveal .slides section.present .eco-satellites > *:nth-child(5) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards; }
+
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(6) { 
+    animation: fadeIn 0.8s ease-out 2.2s forwards; 
+}
+.reveal .slides section.present .ecosystem-diagram > *:nth-child(7) .output-content { 
+    animation: scaleUpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.4s forwards; 
+}
+
+/* Slide 5 - Evolution of NITs (A evolução do papel dos NITs) */
+.nit-evolution-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    background: rgba(10, 17, 40, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 26px 30px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    box-sizing: border-box;
+    gap: 8px;
+}
+
+.nit-col {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    justify-content: flex-start;
+}
+
+.nit-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 18px 0;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.col-traditional h4 {
+    color: var(--text-muted);
+}
+
+.col-emerging h4 {
+    color: var(--accent-orange);
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+.nit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+/* List Item style for NIT */
+.nit-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 7px 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+}
+
+.nit-item:hover {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.col-traditional .nit-item {
+    border-color: rgba(255, 255, 255, 0.03);
+}
+
+.col-emerging .nit-item {
+    border-color: rgba(59, 130, 246, 0.12);
+}
+
+.col-emerging .nit-item:hover {
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.12);
+}
+
+/* Stepper icons */
+.nit-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.col-traditional .nit-icon {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+}
+
+.col-emerging .nit-icon {
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--accent-blue);
+}
+
+/* Custom Highlight colors for AI and Impact icons on the right */
+.col-emerging .stage-highlight-orange .nit-icon {
+    background: rgba(249, 115, 22, 0.1);
+    color: var(--accent-orange);
+    box-shadow: 0 0 8px rgba(249, 115, 22, 0.15);
+}
+
+.nit-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    max-width: 14px !important;
+    flex-shrink: 0;
+    display: block !important;
+}
+
+.nit-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.80rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: left;
+    line-height: 1.25;
+}
+
+.col-emerging .nit-text {
+    color: var(--text-primary);
+}
+
+/* Central Connector Section */
+.nit-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 10%;
+    opacity: 0; /* Animated */
+}
+
+.nit-connector svg {
+    color: var(--accent-orange);
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    filter: drop-shadow(0 0 5px rgba(249, 115, 22, 0.3));
+    display: block !important;
+}
+
+.nit-connector-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* Slide 5 entry cascade choreography */
+.reveal .slides section.present .col-traditional {
+    opacity: 0;
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+.reveal .slides section.present .nit-connector {
+    animation: fadeIn 1.0s ease-out 1.3s forwards;
+}
+
+.reveal .slides section.present .col-emerging {
+    opacity: 0;
+    animation: fadeInUp 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+}
+
+/* Slide 6 - Challenge Slide (Desafio do IFMG) */
+.challenge-diagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+.challenge-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 32%;
+    box-sizing: border-box;
+}
+
+.challenge-node {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px 10px;
+    opacity: 0; /* Animated */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.challenge-node:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.challenge-node svg {
+    flex-shrink: 0;
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    max-width: 14px !important;
+    display: block !important;
+}
+
+.col-process .challenge-node svg {
+    color: var(--accent-blue);
+}
+
+.col-impacts .challenge-node svg {
+    color: #ef4444; /* Warning red */
+}
+
+.challenge-node .node-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1.25;
+    text-align: left;
+}
+
+.col-impacts .challenge-node .node-text {
+    color: var(--text-primary);
+}
+
+/* Center Bottleneck card */
+.bottleneck-card {
+    background: rgba(249, 115, 22, 0.07);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid var(--accent-orange);
+    border-radius: 12px;
+    padding: 18px 14px;
+    width: 32%;
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.2),
+                0 0 15px rgba(249, 115, 22, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    opacity: 0; /* Animated */
+    box-sizing: border-box;
+    transform: scale(0.95);
+}
+
+.bottleneck-card h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    color: var(--accent-orange) !important;
+    margin: 0 0 14px 0 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+}
+
+.bottleneck-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottleneck-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.25;
+}
+
+.bottleneck-list li::before {
+    content: "•";
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+/* Vertical arrows inside columns */
+.challenge-arrow-v {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12px;
+    opacity: 0; /* Animated */
+}
+
+.col-process .challenge-arrow-v {
+    color: rgba(59, 130, 246, 0.15);
+}
+
+.col-impacts .challenge-arrow-v {
+    color: rgba(239, 68, 68, 0.15);
+}
+
+.challenge-arrow-v svg {
+    width: 12px !important;
+    height: 12px !important;
+    display: block !important;
+}
+
+/* Horizontal connectors between columns */
+.flow-connector-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-orange);
+    width: 3%;
+    opacity: 0; /* Animated */
+}
+
+.flow-connector-h svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+    filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.4));
+}
+
+/* Slide 6 Animation Choreography */
+.reveal .slides section.present .col-process > *:nth-child(1) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(2) { animation: fadeIn 0.6s ease-out 0.8s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(3) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(4) { animation: fadeIn 0.6s ease-out 1.0s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(5) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(6) { animation: fadeIn 0.6s ease-out 1.2s forwards; }
+.reveal .slides section.present .col-process > *:nth-child(7) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards; }
+
+.reveal .slides section.present .challenge-diagram > *:nth-child(2) {
+    animation: fadeIn 0.8s ease-out 1.5s forwards;
+}
+
+.reveal .slides section.present .bottleneck-card {
+    animation: scaleUpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards;
+}
+
+.reveal .slides section.present .challenge-diagram > *:nth-child(4) {
+    animation: fadeIn 0.8s ease-out 2.0s forwards;
+}
+
+.reveal .slides section.present .col-impacts > *:nth-child(7) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.8s forwards; }
+
+/* Slide 7 - Response Slide (AGCTIE Radial & Pillars - Minimalist Refinement) */
+.radial-diagram-card {
+    background: rgba(10, 25, 50, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px 16px;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.03);
+}
+
+.radial-container {
+    position: relative;
+    width: 460px;
+    height: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.radial-svg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0; /* Animated */
+}
+
+/* Center Node (30% larger) */
+.radial-center {
+    position: absolute;
+    top: 150px;
+    left: 230px;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(6, 10, 23, 0.95) 100%);
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.25),
+                inset 0 0 15px rgba(59, 130, 246, 0.15);
+    opacity: 0; /* Animated */
+}
+
+.radial-center h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 900 !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.0 !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.radial-center span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.54rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 8px;
+    line-height: 1.2;
+    padding: 0 12px;
+}
+
+/* Outer Satellite Nodes (Border-free minimal style) */
+.radial-satellite-clean {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    opacity: 0; /* Animated */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Left satellites (Right-aligned layout, icon closest to center circle) */
+.sat-left {
+    flex-direction: row-reverse;
+    right: calc(50% + 115px);
+    text-align: right;
+}
+
+.sat-left:hover {
+    transform: translateX(-4px);
+}
+
+/* Right satellites (Left-aligned layout, icon closest to center circle) */
+.sat-right {
+    flex-direction: row;
+    left: calc(50% + 115px);
+    text-align: left;
+}
+
+.sat-right:hover {
+    transform: translateX(4px);
+}
+
+.radial-satellite-clean svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    color: var(--accent-blue);
+    display: block !important;
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4));
+}
+
+.radial-satellite-clean span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Satellite Positions (Vertical rows) */
+/* Top Row */
+.sat-top { top: 75px; }
+/* Middle Row */
+.sat-mid { top: 150px; transform: translateY(-50%); }
+/* Bottom Row */
+.sat-bot { top: 225px; }
+
+/* Base Pillars Band (Horizontal rule style) */
+.base-pillars-band {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Animated */
+    transform: translateY(15px);
+    box-sizing: border-box;
+}
+
+.base-pillars-band .band-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 20%, rgba(255,255,255,0.12) 80%, rgba(255,255,255,0) 100%);
+}
+
+.base-pillars-band .band-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px 0;
+}
+
+.band-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.band-item:hover {
+    transform: translateY(-1px);
+    color: var(--text-primary);
+}
+
+.band-item svg {
+    width: 15px !important;
+    height: 15px !important;
+    min-width: 15px !important;
+    max-width: 15px !important;
+    color: var(--accent-orange);
+    display: block !important;
+    filter: drop-shadow(0 0 3px rgba(249, 115, 22, 0.3));
+}
+
+.band-item span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+}
+
+.base-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+}
+
+/* Slide 7 Animation Choreography */
+.reveal .slides section.present .radial-center {
+    animation: scaleUpFadeInCenter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.reveal .slides section.present .radial-svg-lines {
+    animation: fadeIn 1.0s ease-out 1.1s forwards;
+}
+
+/* Satellites Cascading (Left / Right fade-in transitions) */
+.reveal .slides section.present .sat-left.sat-top { animation: fadeInLeftSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards; }
+.reveal .slides section.present .sat-left.sat-mid { animation: fadeInLeftSatMid 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards; }
+.reveal .slides section.present .sat-left.sat-bot { animation: fadeInLeftSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards; }
+
+.reveal .slides section.present .sat-right.sat-top { animation: fadeInRightSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards; }
+.reveal .slides section.present .sat-right.sat-mid { animation: fadeInRightSatMid 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards; }
+.reveal .slides section.present .sat-right.sat-bot { animation: fadeInRightSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards; }
+
+/* Base pillars */
+.reveal .slides section.present .base-pillars-band {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards;
+}
+
+/* Scale Up keyframes */
+@keyframes scaleUpFadeInCenter {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+}
+
+@keyframes scaleUpFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+/* Left / Right specific keyframes to preserve layout and vertical translate */
+@keyframes fadeInLeftSat {
+    from {
+        opacity: 0;
+        transform: translate(-10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeInLeftSatMid {
+    from {
+        opacity: 0;
+        transform: translate(-10px, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes fadeInRightSat {
+    from {
+        opacity: 0;
+        transform: translate(10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeInRightSatMid {
+    from {
+        opacity: 0;
+        transform: translate(10px, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
+
+/* Slide 8 - PGPI Roadmap Slide */
+.roadmap-diagram-card {
+    background: rgba(10, 25, 50, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px 24px;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.03);
+}
+
+.roadmap-origin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    align-self: center;
+    background: var(--accent-orange-glow);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 5px;
+    opacity: 0; /* Animated */
+}
+
+.roadmap-origin svg {
+    width: 13px !important;
+    height: 13px !important;
+    color: var(--accent-orange);
+    display: block !important;
+}
+
+.roadmap-origin span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.roadmap-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-left: 28px;
+}
+
+.roadmap-line {
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    bottom: 50px;
+    width: 1px;
+    border-left: 1px dashed rgba(59, 130, 246, 0.35);
+    z-index: 1;
+}
+
+.roadmap-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Animated */
+}
+
+.roadmap-marker {
+    position: absolute;
+    left: -23px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 8px var(--accent-blue);
+    z-index: 2;
+}
+
+.roadmap-step:nth-child(even) .roadmap-marker {
+    background: var(--accent-orange);
+    box-shadow: 0 0 8px var(--accent-orange);
+}
+
+.roadmap-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.roadmap-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(59, 130, 246, 0.2);
+    transform: translateX(4px);
+}
+
+.roadmap-step:nth-child(even) .roadmap-card:hover {
+    border-color: rgba(249, 115, 22, 0.2);
+}
+
+.roadmap-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.roadmap-card-header svg {
+    width: 14px !important;
+    height: 14px !important;
+    color: var(--accent-blue);
+    display: block !important;
+}
+
+.roadmap-step:nth-child(even) .roadmap-card-header svg {
+    color: var(--accent-orange);
+}
+
+.roadmap-card-header h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+    letter-spacing: 0.04em !important;
+}
+
+.roadmap-card-header span.card-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.52rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 1px 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-objectives {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.module-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    color: var(--text-secondary);
+    border-radius: 4px;
+    padding: 3px 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.modules-converge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.modules-converge svg {
+    width: 10px !important;
+    height: 10px !important;
+    color: var(--accent-orange);
+    display: block !important;
+}
+
+.converge-target {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba(249, 115, 22, 0.2);
+}
+
+/* Slide 8 Animation Choreography */
+.reveal .slides section.present .roadmap-origin {
+    animation: scaleUpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.reveal .slides section.present .roadmap-step:nth-child(2) {
+    animation: fadeInLeftSat 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
+}
+
+.reveal .slides section.present .roadmap-step:nth-child(3) {
+    animation: fadeInLeftSat 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+}
+
+.reveal .slides section.present .roadmap-step:nth-child(4) {
+    animation: fadeInLeftSat 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+}
+
+/* Slide 9 - PGPI Lifecycle Slide */
+.lifecycle-diagram-card {
+    background: rgba(10, 25, 50, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.03);
+    gap: 15px;
+}
+
+.checklist-panel {
+    flex: 0 0 300px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+    opacity: 0; /* Animated */
+    transform: translateY(15px);
+}
+
+.checklist-panel h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    color: var(--accent-orange) !important;
+    margin: 0 0 4px 0 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase;
+}
+
+.checklist-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+.checklist-item svg {
+    width: 13px !important;
+    height: 13px !important;
+    min-width: 13px !important;
+    max-width: 13px !important;
+    color: var(--accent-orange);
+    display: block !important;
+    filter: drop-shadow(0 0 2px rgba(249, 115, 22, 0.4));
+}
+
+.checklist-item span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1.25;
+}
+
+.lifecycle-container {
+    position: relative;
+    flex: 1;
+    height: 440px;
+    max-width: 440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.lifecycle-svg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0; /* Animated */
+}
+
+/* Center Node */
+.lifecycle-center {
+    position: absolute;
+    top: 220px;
+    left: 220px;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(6, 10, 23, 0.98) 100%);
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.25),
+                inset 0 0 10px rgba(59, 130, 246, 0.15);
+    opacity: 0; /* Animated */
+}
+
+.lifecycle-center h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.0 !important;
+}
+
+.lifecycle-center span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.44rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+    line-height: 1.2;
+    padding: 0 4px;
+}
+
+/* Symmetrical Nodes (9 items) on the circle */
+.lifecycle-node {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    opacity: 0; /* Animated */
+    transition: all 0.3s ease;
+}
+
+.lifecycle-node:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.node-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+}
+
+.node-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.lifecycle-node:nth-child(even) .node-badge {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    box-shadow: 0 0 6px rgba(249, 115, 22, 0.3);
+}
+
+/* Coordinates calculated for center (220, 220) and radius 155px */
+.node-1 { left: 220px; top: 65px; }
+.node-2 { left: 339px; top: 120px; }
+.node-3 { left: 373px; top: 193px; }
+.node-4 { left: 354px; top: 298px; }
+.node-5 { left: 273px; top: 366px; }
+.node-6 { left: 167px; top: 366px; }
+.node-7 { left: 86px; top: 298px; }
+.node-8 { left: 67px; top: 193px; }
+.node-9 { left: 101px; top: 120px; }
+
+/* Slide 9 Animation Choreography */
+.reveal .slides section.present .lifecycle-center {
+    animation: scaleUpFadeInCenter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.reveal .slides section.present .lifecycle-svg-lines {
+    animation: fadeIn 1.0s ease-out 1.0s forwards;
+}
+
+/* Symmetrical nodes cascading in clockwise order (Class-based selector) */
+.reveal .slides section.present .node-1 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards; }
+.reveal .slides section.present .node-2 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards; }
+.reveal .slides section.present .node-3 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards; }
+.reveal .slides section.present .node-4 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards; }
+.reveal .slides section.present .node-5 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards; }
+.reveal .slides section.present .node-6 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s forwards; }
+.reveal .slides section.present .node-7 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 2.3s forwards; }
+.reveal .slides section.present .node-8 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards; }
+.reveal .slides section.present .node-9 { animation: scaleUpFadeInCenter 0.4s cubic-bezier(0.16, 1, 0.3, 1) 2.7s forwards; }
+
+.reveal .slides section.present .checklist-panel {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 3.0s forwards;
+}
+
+/* Slide 10 - Closing Slide (Encerramento) */
+.closing-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 40px !important;
+    box-sizing: border-box !important;
+}
+
+.closing-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.45;
+    color: var(--text-primary);
+    max-width: 1300px;
+    margin: 0 auto 30px auto;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0; /* Animated */
+    text-align: center;
+}
+
+.closing-message span.highlight-orange {
+    color: var(--accent-orange);
+    font-weight: 900;
+}
+
+.closing-subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 0 auto 55px auto;
+    text-align: center;
+    opacity: 0; /* Animated */
+}
+
+.closing-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    opacity: 0; /* Animated */
+}
+
+.footer-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+}
+
+.footer-institution {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.03em;
+}
+
+.footer-agency {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+
+/* Slide 10 Animation Choreography */
+.reveal .slides section.present .closing-message {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.reveal .slides section.present .closing-subtext {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+.reveal .slides section.present .closing-footer {
+    animation: fadeIn 1.5s ease-out 1.8s forwards;
+}
+
+

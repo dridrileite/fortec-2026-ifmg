@@ -1,0 +1,20 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node / Build directories
+node_modules/
+dist/
+build/
+out/
+.temp/
+.cache/
