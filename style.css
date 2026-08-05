@@ -2242,4 +2242,1097 @@
     animation: fadeIn 1.5s ease-out 1.8s forwards;
 }
 
+/* ==========================================================================
+   Slide 3: Ampliação do Diagrama e Ajustes de Legibilidade (Mudança de Paradigma)
+   ========================================================================== */
+
+/* Ampliar o diagrama e ajustar o container de duas colunas */
+.paradigm-shift-slide .split-container {
+    gap: 35px !important;
+}
+
+.paradigm-shift-slide .left-col {
+    width: 44% !important; /* Preservando a largura da coluna de texto da esquerda */
+}
+
+.paradigm-shift-slide .right-col {
+    width: 53.5% !important; /* Ligeiro ajuste mantendo a proporção mas maximizando espaço */
+}
+
+/* Ampliar o card principal de comparação */
+.paradigm-shift-slide .paradigm-comparison {
+    padding: 38px 28px !important; /* Aumentar o padding interno do container */
+    gap: 15px !important;
+}
+
+/* Colunas internas de comparação */
+.paradigm-shift-slide .paradigm-col {
+    width: 45.5% !important; /* Ampliar a largura das colunas internas */
+}
+
+/* Títulos das colunas (Visão Tradicional / Nova Perspectiva) */
+.paradigm-shift-slide .paradigm-col h4 {
+    font-size: 1.45rem !important; /* Aumentar tamanho (antes era 1.25rem) */
+    font-weight: 800 !important; /* Dar maior destaque visual */
+    letter-spacing: 0.12em !important;
+    margin-bottom: 25px !important; /* Aumentar margem inferior */
+}
+
+/* Nova Perspectiva h4 - brilho extra no laranja */
+.paradigm-shift-slide .col-after h4 {
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.35) !important;
+}
+
+/* Espaçamento entre os cards na lista */
+.paradigm-shift-slide .paradigm-col .nit-list {
+    gap: 12px !important; /* Aumentar ligeiramente o espaçamento entre os cards */
+}
+
+/* Ajustes dos Cards de Itens */
+.paradigm-shift-slide .stepper-item-sm {
+    padding: 13px 16px !important; /* Aumentar padding interno dos cards */
+    border-radius: 10px !important; /* Bordas mais suaves para tamanho maior */
+}
+
+/* Aumentar o tamanho dos ícones */
+.paradigm-shift-slide .step-icon-sm {
+    width: 42px !important; /* Aumentar tamanho da caixa do ícone (antes era 32px) */
+    height: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    border-radius: 8px !important;
+}
+
+/* Aumentar tamanho do SVG interno do ícone */
+.paradigm-shift-slide .step-icon-sm svg {
+    width: 20px !important; /* Aumentar tamanho do ícone em si (antes era 16px) */
+    height: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+}
+
+/* Aumentar tamanho dos textos descritivos / títulos dos itens */
+.paradigm-shift-slide .step-text-sm {
+    font-size: 1.05rem !important; /* Aumentar tamanho do texto (antes era 0.88rem) */
+    line-height: 1.35 !important;
+}
+
+/* Ajustar Título do Diagrama centralizado acima da caixa */
+.paradigm-shift-slide .panel-title-secondary {
+    font-size: 1.35rem !important; /* Ligeiro aumento do título principal (antes era 1.2rem) */
+    margin-bottom: 25px !important;
+}
+
+/* Estilo para o Conector Central (Seta Horizontal sem Texto Vertical) */
+.paradigm-shift-slide .paradigm-connector {
+    width: 9% !important; /* Reduzir largura do conector */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 50px !important; /* Alinhamento vertical do conector com as colunas */
+}
+
+/* A seta horizontal entre as duas colunas */
+.paradigm-shift-slide .paradigm-connector svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    transform: none !important; /* Garantir que a seta fique horizontal (apontando para a direita) */
+    color: var(--accent-orange) !important;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.5)) !important;
+}
+
+/* ==========================================================================
+   Slide 4: Ampliação do Diagrama "Da Proteção ao Impacto"
+   ========================================================================== */
+
+/* Ajuste do container para expandir o diagrama à direita */
+.ecosystem-slide .split-container {
+    gap: 35px !important;
+}
+
+.ecosystem-slide .right-col {
+    width: 55% !important; /* Aumentar largura da coluna direita (antes 53%) */
+}
+
+/* 1. Ampliar a área geral do diagrama */
+.ecosystem-diagram {
+    width: 100% !important;
+}
+
+/* Conectores verticais - Aumentar altura para expandir verticalmente o diagrama */
+.ecosystem-slide .eco-connector-v.c1 {
+    height: 36px !important; /* Antes 28px */
+}
+.ecosystem-slide .eco-connector-v.c2 {
+    height: 44px !important; /* Antes 32px */
+}
+.ecosystem-slide .eco-connector-v.c3 {
+    height: 44px !important; /* Antes 32px */
+}
+
+/* Ampliar a largura máxima dos conectores SVG para acompanhar os cards maiores */
+.ecosystem-slide .eco-connector-v svg {
+    max-width: 680px !important; /* Antes 500px */
+}
+
+/* 2. Ampliar o Elemento Central (PROPRIEDADE INTELECTUAL) */
+.ecosystem-slide .hub-content {
+    max-width: 420px !important; /* Antes 330px */
+    padding: 22px 36px !important; /* Antes 16px 28px */
+    border-radius: 16px !important; /* Antes 14px */
+    box-shadow: 0 20px 45px rgba(59, 130, 246, 0.3),
+                0 0 25px rgba(59, 130, 246, 0.15),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+.ecosystem-slide .hub-content h3 {
+    font-size: 1.45rem !important; /* Antes 1.15rem */
+    margin: 12px 0 5px 0 !important; /* Mais espaçamento interno */
+    letter-spacing: 0.06em !important;
+}
+
+.ecosystem-slide .hub-sub {
+    font-size: 0.95rem !important; /* Antes 0.78rem */
+    letter-spacing: 0.1em !important;
+}
+
+.ecosystem-slide .hub-icon svg {
+    width: 32px !important; /* Antes 24px */
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+}
+
+/* Descrição textual abaixo do Hub Central */
+.ecosystem-slide .eco-hub-subtext {
+    font-size: 0.82rem !important; /* Antes 0.65rem */
+    margin-top: 12px !important;
+    letter-spacing: 0.14em !important;
+}
+
+/* 3. Aumentar os Elementos Periféricos */
+
+/* Nível 1: Pesquisa & Conhecimento (Inputs superiores) */
+.ecosystem-slide .eco-inputs {
+    gap: 60px !important; /* Afastar um pouco para acompanhar o tamanho maior */
+}
+
+.ecosystem-slide .eco-node {
+    padding: 10px 22px !important; /* Antes 6px 16px */
+    font-size: 1.05rem !important; /* Antes 0.88rem */
+    border-radius: 24px !important; /* Antes 20px */
+}
+
+.ecosystem-slide .eco-node svg {
+    width: 18px !important; /* Antes 14px */
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+}
+
+/* Nível 3: Satélites (Transferência, Parcerias, Empreendedorismo, etc.) */
+.ecosystem-slide .eco-satellites {
+    max-width: 760px !important; /* Aumentar largura máxima da linha (antes 620px) */
+    gap: 14px !important; /* Aumentar espaço entre os cards (antes 12px) */
+}
+
+.ecosystem-slide .sat-node {
+    padding: 12px 20px !important; /* Aumentar padding interno (antes 8px 14px) */
+    font-size: 1.02rem !important; /* Aumentar tamanho do texto (antes 0.84rem) */
+    border-radius: 10px !important; /* Antes 8px */
+    gap: 10px !important; /* Aumentar espaço entre ícone e texto */
+}
+
+.ecosystem-slide .sat-node svg {
+    width: 18px !important; /* Aumentar tamanho do ícone (antes 14px) */
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+}
+
+/* 4. Destacar o Resultado Final (IMPACTO SOCIAL E ECONÔMICO) */
+.ecosystem-slide .output-content {
+    padding: 18px 36px !important; /* Antes 14px 28px */
+    border-radius: 14px !important; /* Antes 12px */
+    gap: 14px !important;
+    box-shadow: 0 16px 40px rgba(249, 115, 22, 0.25),
+                inset 0 1px 1px rgba(249, 115, 22, 0.15) !important;
+}
+
+.ecosystem-slide .output-content h4 {
+    font-size: 1.25rem !important; /* Aumentar tamanho (antes 1.05rem) */
+    letter-spacing: 0.06em !important;
+}
+
+.ecosystem-slide .output-icon svg {
+    width: 24px !important; /* Aumentar tamanho do ícone (antes 18px) */
+    height: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+}
+
+/* ==========================================================================
+   Slide 5: Ampliação do Diagrama "A Evolução do Papel dos NITs"
+   ========================================================================== */
+
+/* Ajuste do container para expandir a área do diagrama */
+.nit-role-evolution-slide .split-container {
+    gap: 35px !important;
+}
+
+.nit-role-evolution-slide .left-col {
+    width: 44% !important; /* Preservando a largura da coluna de texto da esquerda */
+}
+
+.nit-role-evolution-slide .right-col {
+    width: 53.5% !important; /* Maximizar espaço do lado direito */
+}
+
+/* Card principal do comparativo */
+.nit-role-evolution-slide .nit-evolution-card {
+    padding: 38px 28px !important; /* Aumentar o padding interno (antes era 26px 30px) */
+    gap: 15px !important;
+    width: 100% !important;
+}
+
+/* Colunas do comparativo */
+.nit-role-evolution-slide .nit-col {
+    width: 45.5% !important; /* Ampliar a largura das colunas internas (antes era 44%) */
+}
+
+/* Títulos das colunas (ATUAÇÃO TRADICIONAL / ATUAÇÃO ESTRATÉGICA) */
+.nit-role-evolution-slide .nit-col h4 {
+    font-size: 1.35rem !important; /* Aumentar tamanho da fonte */
+    font-weight: 800 !important; /* Extra-bold para destaque visual */
+    letter-spacing: 0.12em !important;
+    margin-bottom: 22px !important; /* Mais espaçamento inferior (antes era margin h4 padrão) */
+    text-align: center !important;
+}
+
+/* Adicionar sombra de brilho no título da Atuação Estratégica */
+.nit-role-evolution-slide .col-emerging h4 {
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.35) !important;
+}
+
+/* Espaçamento vertical entre os cards de itens */
+.nit-role-evolution-slide .nit-list {
+    gap: 10px !important; /* Aumentar espaço vertical entre os itens da lista (antes era 6px) */
+}
+
+/* Ajustes dos Cards de Itens */
+.nit-role-evolution-slide .nit-item {
+    padding: 12px 16px !important; /* Aumentar o padding interno (antes era 7px 10px) */
+    border-radius: 8px !important; /* Bordas ligeiramente mais suaves */
+}
+
+/* Aumentar o tamanho dos ícones */
+.nit-role-evolution-slide .nit-icon {
+    width: 38px !important; /* Aumentar tamanho da caixa do ícone (antes era 28px) */
+    height: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    border-radius: 6px !important;
+}
+
+/* Aumentar tamanho do SVG interno do ícone */
+.nit-role-evolution-slide .nit-icon svg {
+    width: 18px !important; /* Aumentar tamanho do SVG em si */
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+}
+
+/* Aumentar o tamanho da tipografia do item */
+.nit-role-evolution-slide .nit-text {
+    font-size: 0.95rem !important; /* Aumentar tamanho da fonte (antes era 0.80rem) */
+    line-height: 1.35 !important;
+}
+
+/* Ajuste do Conector de Transição Central (Seta simples, sem texto) */
+.nit-role-evolution-slide .nit-connector {
+    width: 9% !important; /* Reduzir largura do conector de 10% para 9% */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 55px !important; /* Centralizar verticalmente com as listas de itens */
+}
+
+/* A seta simples horizontal entre as duas colunas */
+.nit-role-evolution-slide .nit-connector svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    transform: none !important; /* Garantir que a seta fique horizontal apontando para a direita */
+    color: var(--accent-orange) !important;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.5)) !important;
+}
+
+/* ==========================================================================
+   Slide 6: Evidenciar as consequências da fragmentação das informações
+   ========================================================================== */
+
+/* Ajustar as proporções das colunas no Slide 6 */
+.challenge-slide .challenge-col.col-process {
+    width: 30% !important;
+}
+
+.challenge-slide .bottleneck-card {
+    width: 32% !important;
+}
+
+.challenge-slide .challenge-col.col-impacts {
+    width: 34% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+/* Consequence Cards (Parallel layout) */
+.challenge-slide .consequence-node {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: rgba(239, 68, 68, 0.04) !important;
+    border: 1px solid rgba(239, 68, 68, 0.12) !important;
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    min-height: 80px !important;
+    box-sizing: border-box !important;
+    opacity: 0; /* Animated */
+}
+
+.challenge-slide .consequence-node:hover {
+    background: rgba(239, 68, 68, 0.08) !important;
+    border-color: rgba(239, 68, 68, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(239, 68, 68, 0.12) !important;
+}
+
+.challenge-slide .consequence-icon {
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.challenge-slide .consequence-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    display: block !important;
+    color: #ef4444 !important;
+}
+
+.challenge-slide .consequence-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: left !important;
+}
+
+.challenge-slide .consequence-title {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    line-height: 1.25 !important;
+}
+
+.challenge-slide .consequence-subtitle {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.68rem !important;
+    font-weight: 400 !important;
+    color: var(--text-secondary) !important;
+    opacity: 0.85 !important;
+    line-height: 1.3 !important;
+}
+
+/* Slide 6 Animation choreography overrides */
+.reveal .slides section.present .col-impacts > *:nth-child(1) {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards !important;
+}
+
+.reveal .slides section.present .col-impacts > *:nth-child(2) {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards !important;
+}
+
+/* ==========================================================================
+   Slide 6: Evidenciar as consequências da fragmentação das informações
+   ========================================================================== */
+
+/* Ajustar as proporções das colunas no Slide 6 para acomodar caixas lado a lado */
+.challenge-slide .challenge-col.col-process {
+    width: 22% !important; /* Estreitar coluna de processos (textos curtos) */
+}
+
+.challenge-slide .bottleneck-card {
+    width: 24% !important; /* Estreitar coluna do gargalo central */
+}
+
+.challenge-slide .challenge-col.col-impacts {
+    width: 44% !important; /* Alargar para acomodar dois cards de consequências lado a lado */
+    display: flex !important;
+    flex-direction: row !important; /* Posicionar lado a lado */
+    align-items: stretch !important; /* Altura igual para as caixas */
+    justify-content: space-between !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Consequence Cards (Parallel side-by-side layout) */
+.challenge-slide .consequence-node {
+    display: flex !important;
+    flex-direction: column !important; /* Disposição vertical para cards estreitos */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    background: rgba(239, 68, 68, 0.04) !important;
+    border: 1px solid rgba(239, 68, 68, 0.12) !important;
+    border-radius: 12px !important;
+    padding: 18px 12px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    width: 48.5% !important; /* Ocupa metade da coluna de impactos */
+    box-sizing: border-box !important;
+    opacity: 0; /* Animated via reveal */
+}
+
+.challenge-slide .consequence-node:hover {
+    background: rgba(239, 68, 68, 0.07) !important;
+    border-color: rgba(239, 68, 68, 0.25) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.15) !important;
+}
+
+.challenge-slide .consequence-icon {
+    background: rgba(239, 68, 68, 0.08) !important;
+    color: #ef4444 !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.challenge-slide .consequence-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    display: block !important;
+    color: #ef4444 !important;
+}
+
+.challenge-slide .consequence-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.challenge-slide .consequence-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    color: var(--text-primary) !important;
+    line-height: 1.3 !important;
+}
+
+.challenge-slide .consequence-subtitle {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    opacity: 0.85 !important;
+    line-height: 1.35 !important;
+}
+
+/* Bullet list inside Consequence 1 */
+.challenge-slide .consequence-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 4px 0 0 0 !important;
+    text-align: left !important;
+    align-self: center !important;
+}
+
+.challenge-slide .consequence-list li {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.3 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+.challenge-slide .consequence-list li::before {
+    content: "•" !important;
+    color: #ef4444 !important;
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Conector bifurcado de saída dupla */
+.challenge-slide .bifurcation-connector {
+    width: 6% !important; /* Espaço horizontal para a linha de ramificação */
+    height: 140px !important; /* Altura suficiente para alcançar os dois cards */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0; /* Animado via reveal */
+}
+
+.challenge-slide .bifurcation-connector svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    color: var(--accent-orange) !important;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.45)) !important;
+}
+
+/* Slide 6 Animation choreography overrides */
+.reveal .slides section.present .col-impacts > *:nth-child(1) {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards !important;
+}
+
+.reveal .slides section.present .col-impacts > *:nth-child(2) {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards !important;
+}
+
+/* ==========================================================================
+   Slide 8: Ampliação do Diagrama do SGPI
+   ========================================================================== */
+
+/* Ampliar container interno e ajustar espaçamento */
+.pgpi-slide .roadmap-diagram-card {
+    padding: 16px 20px !important;
+}
+
+/* Origem do roteiro (AGCTIE Estratégia) */
+.pgpi-slide .roadmap-origin {
+    padding: 6px 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.pgpi-slide .roadmap-origin svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.pgpi-slide .roadmap-origin span {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1em !important;
+}
+
+/* Espaçamento geral do container do roteiro */
+.pgpi-slide .roadmap-container {
+    gap: 16px !important;
+    margin-top: 8px !important;
+    padding-left: 32px !important;
+}
+
+.pgpi-slide .roadmap-line {
+    left: 12px !important;
+}
+
+.pgpi-slide .roadmap-marker {
+    left: -25px !important;
+    top: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Cartões do Roteiro (MVP, Evolução, Integração dos Dados) */
+.pgpi-slide .roadmap-card {
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+}
+
+.pgpi-slide .roadmap-card-header {
+    gap: 10px !important;
+    margin-bottom: 8px !important;
+}
+
+.pgpi-slide .roadmap-card-header svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.pgpi-slide .roadmap-card-header h4 {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+}
+
+.pgpi-slide .roadmap-card-header span.card-badge {
+    font-size: 0.72rem !important;
+    padding: 2px 6px !important;
+    border-radius: 5px !important;
+}
+
+.pgpi-slide .card-objectives {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+}
+
+/* DESTAQUE: Terceira Etapa - Integração dos Dados (Ecossistema) */
+.pgpi-slide .roadmap-step:nth-child(4) .roadmap-card {
+    background: rgba(59, 130, 246, 0.05) !important;
+    border: 1.5px solid rgba(59, 130, 246, 0.35) !important;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15) !important;
+}
+
+.pgpi-slide .roadmap-step:nth-child(4) .roadmap-card:hover {
+    border-color: rgba(59, 130, 246, 0.5) !important;
+    background: rgba(59, 130, 246, 0.08) !important;
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Grade de Módulos (Pesquisa, Projetos, PI, etc.) */
+.pgpi-slide .modules-grid {
+    gap: 8px !important;
+    margin-top: 10px !important;
+}
+
+.pgpi-slide .module-tag {
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    padding: 5px 8px !important;
+    border-radius: 5px !important;
+    background: rgba(59, 130, 246, 0.12) !important;
+    border: 1px solid rgba(59, 130, 246, 0.25) !important;
+    color: var(--text-primary) !important;
+    transition: all 0.2s ease !important;
+}
+
+.pgpi-slide .module-tag:hover {
+    background: rgba(59, 130, 246, 0.2) !important;
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Convergência Final (Indicadores & Tomada de Decisão) */
+.pgpi-slide .modules-converge {
+    margin-top: 12px !important;
+    padding-top: 10px !important;
+    border-top: 1.5px dashed rgba(249, 115, 22, 0.3) !important;
+    gap: 8px !important;
+}
+
+.pgpi-slide .modules-converge svg {
+    width: 14px !important;
+    height: 14px !important;
+    animation: bounce 2s infinite !important;
+}
+
+.pgpi-slide .converge-target {
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.06em !important;
+    text-shadow: 0 0 12px rgba(249, 115, 22, 0.45) !important;
+    color: var(--accent-orange) !important;
+}
+
+/* Efeito de pulso para a seta indicando convergência */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+/* ==========================================================================
+   Slide 7: AGCTIE como Elemento Integrador do Ecossistema de Inovação
+   ========================================================================== */
+
+/* Container Principal do Diagrama de Integração */
+.integration-diagram-card {
+    background: rgba(10, 25, 50, 0.35) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px !important;
+    padding: 24px 20px !important;
+    width: 100% !important;
+    height: 520px !important; /* Mesma altura que o Roteiro do Slide 8 */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Área Radial Superior */
+.integration-radial-area {
+    position: relative !important;
+    width: 100% !important;
+    height: 220px !important;
+}
+
+.integration-svg-lines {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    opacity: 0; /* Animado */
+}
+
+/* Hub Central AGCTIE */
+.int-center-node {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0.03) 100%) !important;
+    border: 2px solid var(--accent-orange) !important;
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.25),
+                inset 0 0 10px rgba(249, 115, 22, 0.1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 3 !important;
+    opacity: 0; /* Animado */
+}
+
+.int-center-node h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    color: var(--accent-orange) !important;
+    margin: 0 0 4px 0 !important;
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.3) !important;
+}
+
+.int-center-node span {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.58rem !important;
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    padding: 0 8px !important;
+}
+
+/* Satélites de Competências */
+.integration-radial-area .int-sat {
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    z-index: 5 !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    box-sizing: border-box !important;
+    opacity: 0; /* Animado */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Alinhamento dos Satélites */
+.integration-radial-area .sat-tl,
+.integration-radial-area .sat-ml,
+.integration-radial-area .sat-bl {
+    right: calc(50% + 95px) !important;
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+}
+
+.integration-radial-area .sat-tr,
+.integration-radial-area .sat-mr,
+.integration-radial-area .sat-br {
+    left: calc(50% + 95px) !important;
+    flex-direction: row !important;
+    text-align: left !important;
+}
+
+/* Hover nos Satélites */
+.integration-radial-area .sat-tl:hover,
+.integration-radial-area .sat-bl:hover {
+    transform: translateX(-4px) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.integration-radial-area .sat-tr:hover,
+.integration-radial-area .sat-br:hover {
+    transform: translateX(4px) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.integration-radial-area .sat-ml:hover {
+    transform: translate(-4px, -50%) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.integration-radial-area .sat-mr:hover {
+    transform: translate(4px, -50%) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Espaçamento Vertical dos Satélites */
+.integration-radial-area .sat-tl,
+.integration-radial-area .sat-tr {
+    top: 25px !important;
+}
+
+.integration-radial-area .sat-ml,
+.integration-radial-area .sat-mr {
+    top: 110px !important;
+    transform: translateY(-50%) !important;
+}
+
+.integration-radial-area .sat-bl,
+.integration-radial-area .sat-br {
+    top: 195px !important;
+}
+
+/* Ícones e Tipografia dos Satélites */
+.integration-radial-area .int-sat svg {
+    width: 15px !important;
+    height: 15px !important;
+    min-width: 15px !important;
+    max-width: 15px !important;
+    display: block !important;
+    color: var(--accent-blue) !important;
+}
+
+.integration-radial-area .int-sat span {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Setas Verticais de Fluxo */
+.integration-arrow-v {
+    height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--accent-orange) !important;
+    filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.4)) !important;
+    opacity: 0; /* Animado */
+}
+
+.integration-arrow-v svg {
+    width: 14px !important;
+    height: 14px !important;
+    display: block !important;
+}
+
+/* Área dos Três Pilares */
+.integration-pillars-area {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+}
+
+.int-pillar {
+    width: 32% !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 8px !important;
+    padding: 8px 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    box-sizing: border-box !important;
+    opacity: 0; /* Animado */
+    transition: all 0.3s ease !important;
+}
+
+.int-pillar:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+.pillar-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-bottom: 4px !important;
+}
+
+.pillar-header svg {
+    width: 14px !important;
+    height: 14px !important;
+    color: var(--accent-blue) !important;
+    display: block !important;
+}
+
+.pillar-header h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+}
+
+.int-pillar p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.64rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+}
+
+/* Card de Impacto Final (Resultado Institucional) */
+.integration-impact-card {
+    width: 100% !important;
+    background: rgba(249, 115, 22, 0.06) !important;
+    border: 2px solid var(--accent-orange) !important;
+    border-radius: 10px !important;
+    padding: 10px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.12) !important;
+    box-sizing: border-box !important;
+    opacity: 0; /* Animado */
+    transition: all 0.3s ease !important;
+}
+
+.integration-impact-card:hover {
+    background: rgba(249, 115, 22, 0.09) !important;
+    transform: scale(1.01) !important;
+    box-shadow: 0 8px 24px rgba(249, 115, 22, 0.2) !important;
+}
+
+.impact-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-bottom: 2px !important;
+}
+
+.impact-header svg {
+    width: 18px !important;
+    height: 18px !important;
+    color: var(--accent-orange) !important;
+    display: block !important;
+}
+
+.impact-header h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+}
+
+.integration-impact-card p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.3 !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   Slide 7: Animações Sequenciais do Fluxo de Integração
+   ========================================================================== */
+
+.reveal .slides section.present .int-center-node {
+    animation: scaleUpFadeInCenter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards !important;
+}
+
+.reveal .slides section.present .integration-svg-lines {
+    animation: fadeIn 1.0s ease-out 1.0s forwards !important;
+}
+
+/* Revelação dos Satélites (Cascata) */
+.reveal .slides section.present .sat-tl { animation: fadeInLeftSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards !important; }
+.reveal .slides section.present .sat-ml { animation: fadeInLeftSatMid 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important; }
+.reveal .slides section.present .sat-bl { animation: fadeInLeftSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.4s forwards !important; }
+
+.reveal .slides section.present .sat-tr { animation: fadeInRightSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important; }
+.reveal .slides section.present .sat-mr { animation: fadeInRightSatMid 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards !important; }
+.reveal .slides section.present .sat-br { animation: fadeInRightSat 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.7s forwards !important; }
+
+/* Setas e Pilares */
+.reveal .slides section.present .integration-arrow-v:not(.final-arrow) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards !important;
+}
+
+.reveal .slides section.present .int-pillar:nth-child(1) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.1s forwards !important; }
+.reveal .slides section.present .int-pillar:nth-child(2) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards !important; }
+.reveal .slides section.present .int-pillar:nth-child(3) { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.3s forwards !important; }
+
+.reveal .slides section.present .final-arrow {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards !important;
+}
+
+.reveal .slides section.present .integration-impact-card {
+    animation: scaleUpFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.7s forwards !important;
+}
+
+
+
+
+
+
+
+
 

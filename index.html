@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026-08-04-A">
 </head>
 <body>
 
@@ -193,7 +193,7 @@
             </section>
 
             <!-- Slide 3: A Inteligência Artificial mudou a lógica da inovação -->
-            <section class="split-slide" 
+            <section class="split-slide paradigm-shift-slide" 
                      data-background-image="assets/background.png" 
                      data-background-opacity="0.12" 
                      data-background-color="#060a17">
@@ -273,7 +273,6 @@
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
-                                <span class="connector-label">MUDANÇA DE PARADIGMA</span>
                             </div>
                             
                             <!-- Column 2: Nova Perspectiva -->
@@ -475,7 +474,7 @@
             </section>
 
             <!-- Slide 5: A evolução do papel dos NITs (Comparativo) -->
-            <section class="split-slide" 
+            <section class="split-slide nit-role-evolution-slide" 
                      data-background-image="assets/background.png" 
                      data-background-opacity="0.1" 
                      data-background-color="#060a17">
@@ -561,7 +560,6 @@
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
-                                <span class="nit-connector-label">EVOLUÇÃO</span>
                             </div>
                             
                             <!-- Column 2: Estratégica -->
@@ -742,59 +740,49 @@
                                 </ul>
                             </div>
                             
-                            <!-- Connector 2 (Center to Right) -->
-                            <div class="flow-connector-h">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+                            <!-- Connector 2 (Center to Right - Bifurcation) -->
+                            <div class="flow-connector-h bifurcation-connector">
+                                <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="0" y1="40" x2="35" y2="40" />
+                                    <path d="M 35 40 Q 55 40 65 15 L 92 15" />
+                                    <polyline points="85 9 92 15 85 21" />
+                                    <path d="M 35 40 Q 55 40 65 65 L 92 65" />
+                                    <polyline points="85 59 92 65 85 71" />
                                 </svg>
                             </div>
                             
                             <!-- Column 3: Impacts (Right) -->
                             <div class="challenge-col col-impacts">
-                                <div class="challenge-node">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-10-8-10-8a18.55 18.55 0 0 1 5-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 10 8 10 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>
-                                    </svg>
-                                    <div class="node-text">Baixa visibilidade institucional</div>
+                                <!-- Consequence 1: Dificuldade na gestão dos dados -->
+                                <div class="challenge-node consequence-node">
+                                    <div class="consequence-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="consequence-content">
+                                        <div class="consequence-title">Dificuldade na gestão dos dados</div>
+                                        <ul class="consequence-list">
+                                            <li>Dados dispersos</li>
+                                            <li>Integração limitada</li>
+                                            <li>Indicadores inconsistentes</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 
-                                <div class="challenge-arrow-v">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
-                                    </svg>
-                                </div>
-                                
-                                <div class="challenge-node">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line>
-                                    </svg>
-                                    <div class="node-text">Dificuldade para gerar indicadores</div>
-                                </div>
-                                
-                                <div class="challenge-arrow-v">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
-                                    </svg>
-                                </div>
-                                
-                                <div class="challenge-node">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg>
-                                    <div class="node-text">Pouco suporte à decisão</div>
-                                </div>
-                                
-                                <div class="challenge-arrow-v">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
-                                    </svg>
-                                </div>
-                                
-                                <div class="challenge-node">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-                                    </svg>
-                                    <div class="node-text">Baixa capacidade de gestão estratégica</div>
+                                <!-- Consequence 2: Baixa capacidade de gestão estratégica -->
+                                <div class="challenge-node consequence-node">
+                                    <div class="consequence-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="consequence-content">
+                                        <div class="consequence-title">Baixa capacidade de gestão estratégica</div>
+                                        <div class="consequence-subtitle">Dificuldade para apoiar decisões institucionais</div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -835,100 +823,132 @@
                         </div>
                     </div>
                     
-                    <!-- Right Column: Radial Diagram with Base Pillars -->
+                    <!-- Right Column: Integration Flow Diagram -->
                     <div class="right-col">
-                        <div class="radial-diagram-card">
+                        <div class="integration-diagram-card">
                             
-                            <!-- Radial Container -->
-                            <div class="radial-container">
+                            <!-- Part 1: Radial Integration (Top) -->
+                            <div class="integration-radial-area">
                                 <!-- SVGs connecting center to satellites -->
-                                <svg class="radial-svg-lines" viewBox="0 0 460 300">
-                                    <!-- Left side lines -->
-                                    <line x1="230" y1="150" x2="152" y2="16" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <line x1="230" y1="150" x2="75" y2="150" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <line x1="230" y1="150" x2="152" y2="284" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <!-- Right side lines -->
-                                    <line x1="230" y1="150" x2="308" y2="16" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <line x1="230" y1="150" x2="385" y2="150" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <line x1="230" y1="150" x2="308" y2="284" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                <svg class="integration-svg-lines" viewBox="0 0 460 220">
+                                    <line x1="230" y1="110" x2="95" y2="25" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <line x1="230" y1="110" x2="55" y2="110" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <line x1="230" y1="110" x2="95" y2="195" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <line x1="230" y1="110" x2="365" y2="25" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <line x1="230" y1="110" x2="405" y2="110" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
+                                    <line x1="230" y1="110" x2="365" y2="195" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" stroke-dasharray="3 3" />
                                 </svg>
                                 
-                                <!-- Central Hub -->
-                                <div class="radial-center">
+                                <!-- Central Hub AGCTIE -->
+                                <div class="int-center-node">
                                     <h3>AGCTIE</h3>
-                                    <span>Centro Integrador da Inovação</span>
+                                    <span>Integrando competências<br>para gerar impacto</span>
                                 </div>
                                 
-                                <!-- Satellites (Minimalist Outline and Label) -->
-                                <!-- 1. Ciência (Top Right) -->
-                                <div class="radial-satellite-clean sat-right sat-top">
+                                <!-- Satellites -->
+                                <!-- 1. Pesquisa (Top Left) -->
+                                <div class="int-sat sat-tl">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M2 22h20M5 22V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v18"></path>
+                                        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                     </svg>
-                                    <span>Ciência</span>
+                                    <span>Pesquisa</span>
                                 </div>
-                                <!-- 2. Tecnologia (Middle Right) -->
-                                <div class="radial-satellite-clean sat-right sat-mid">
+                                <!-- 2. Conhecimento (Middle Left) -->
+                                <div class="int-sat sat-ml">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                                     </svg>
-                                    <span>Tecnologia</span>
+                                    <span>Conhecimento</span>
                                 </div>
-                                <!-- 3. Inovação (Bottom Right) -->
-                                <div class="radial-satellite-clean sat-right sat-bot">
+                                <!-- 3. Inovação (Bottom Left) -->
+                                <div class="int-sat sat-bl">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6M10 22h4"></path>
                                     </svg>
                                     <span>Inovação</span>
                                 </div>
-                                <!-- 4. Empreendedorismo (Top Left) -->
-                                <div class="radial-satellite-clean sat-left sat-top">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                    </svg>
-                                    <span>Empreendedorismo</span>
-                                </div>
-                                <!-- 5. Propriedade Intelectual (Middle Left) -->
-                                <div class="radial-satellite-clean sat-left sat-mid">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                    </svg>
-                                    <span>Propriedade Intelectual</span>
-                                </div>
-                                <!-- 6. Transferência de Tecnologia (Bottom Left) -->
-                                <div class="radial-satellite-clean sat-left sat-bot">
+                                <!-- 4. Transferência de Tecnologia (Top Right) -->
+                                <div class="int-sat sat-tr">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
                                     <span>Transferência de Tecnologia</span>
                                 </div>
+                                <!-- 5. Propriedade Intelectual (Middle Right) -->
+                                <div class="int-sat sat-mr">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                    <span>Propriedade Intelectual</span>
+                                </div>
+                                <!-- 6. Empreendedorismo (Bottom Right) -->
+                                <div class="int-sat sat-br">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span>Empreendedorismo</span>
+                                </div>
                             </div>
                             
-                            <!-- Base Pillars Band (Horizontal rule style) -->
-                            <div class="base-pillars-band">
-                                <div class="band-line"></div>
-                                <div class="band-content">
-                                    <div class="band-item">
+                            <!-- Part 2: Down Arrow 1 -->
+                            <div class="integration-arrow-v">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                            
+                            <!-- Part 3: Symmetrical Pillars (Middle) -->
+                            <div class="integration-pillars-area">
+                                <!-- Pillar 1: Dados -->
+                                <div class="int-pillar">
+                                    <div class="pillar-header">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                             <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                                         </svg>
-                                        <span>DADOS</span>
+                                        <h4>Dados</h4>
                                     </div>
-                                    <div class="band-item">
+                                    <p>Informações integradas e confiáveis</p>
+                                </div>
+                                
+                                <!-- Pillar 2: Inteligência -->
+                                <div class="int-pillar">
+                                    <div class="pillar-header">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                             <circle cx="12" cy="12" r="10"></circle><polyline points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polyline>
                                         </svg>
-                                        <span>INTELIGÊNCIA</span>
+                                        <h4>Inteligência</h4>
                                     </div>
-                                    <div class="band-item">
+                                    <p>Recursos e competências conectadas</p>
+                                </div>
+                                
+                                <!-- Pillar 3: Governança -->
+                                <div class="int-pillar">
+                                    <div class="pillar-header">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                         </svg>
-                                        <span>GOVERNANÇA</span>
+                                        <h4>Governança</h4>
                                     </div>
+                                    <p>Gestão institucional transparente e eficiente</p>
                                 </div>
-                                <div class="band-line"></div>
-                                <div class="base-caption">Esses três elementos sustentam toda a atuação da AGCTIE.</div>
+                            </div>
+                            
+                            <!-- Part 4: Down Arrow 2 -->
+                            <div class="integration-arrow-v final-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                            
+                            <!-- Part 5: Impact Card (Bottom) -->
+                            <div class="integration-impact-card">
+                                <div class="impact-header">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M23 6l-9.5 9.5-5-5L1 18"></path><polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                    <h2>IMPACTO SOCIAL E ECONÔMICO</h2>
+                                </div>
+                                <p>Gerando valor para a sociedade e desenvolvimento para o IFMG</p>
                             </div>
                             
                         </div>
@@ -938,7 +958,7 @@
                 
             </section>
 
-            <!-- Slide 8: Sistema de Gestão da Propriedade Intelectual (PGPI) -->
+            <!-- Slide 8: Sistema de Gestão da Propriedade Intelectual (SGPI) -->
             <section class="split-slide pgpi-slide" 
                      data-background-image="assets/background.png" 
                      data-background-opacity="0.1" 
@@ -951,19 +971,19 @@
                         <div class="badge-tag">GESTÃO OPERACIONAL</div>
                         
                         <h2 class="slide-title-secondary" style="text-align: left; font-size: 2.3rem !important; line-height: 1.15 !important; margin-bottom: 20px !important;">
-                            Sistema de Gestão da Propriedade Intelectual (PGPI)
+                            SGPI (Sistema de Gestão da Propriedade Intelectual)
                         </h2>
                         
                         <h3 class="slide-subtitle-sm">Da estratégia institucional à gestão integrada da Propriedade Intelectual</h3>
                         
                         <div class="narrative-paragraphs narrow">
-                            <p>O Sistema de Gestão da Propriedade Intelectual (PGPI) foi concebido para apoiar a atuação da AGCTIE ao longo de todo o ciclo de vida dos ativos de propriedade intelectual.</p>
+                            <p>O SGPI (Sistema de Gestão da Propriedade Intelectual) foi concebido para apoiar a atuação da AGCTIE ao longo de todo o ciclo de vida dos ativos de propriedade intelectual.</p>
                             <p>Sua implantação será realizada de forma incremental. A primeira etapa consiste no desenvolvimento de um Produto Mínimo Viável (MVP) utilizando Google Apps Script, validando processos, regras de negócio e fluxos de trabalho de forma ágil e de baixo custo.</p>
                             <p>Após essa fase, a solução evoluirá para integração ao SUAP, possibilitando maior segurança e sustentabilidade tecnológica, preparando o caminho para conectar informações de pesquisa, projetos e extensão corporativos.</p>
                         </div>
                         
                         <div class="highlight-orange-box slide4-box">
-                            "O verdadeiro valor do PGPI não está apenas na informatização dos processos, mas na <strong>integração</strong> das <strong>informações</strong> para fortalecer a <strong>gestão</strong> da Propriedade Intelectual."
+                            "O verdadeiro valor do SGPI não está apenas na informatização dos processos, mas na <strong>integração</strong> das <strong>informações</strong> para fortalecer a <strong>gestão</strong> da Propriedade Intelectual."
                         </div>
                     </div>
                     
@@ -1066,7 +1086,7 @@
                 
             </section>
 
-            <!-- Slide 9: PGPI: Gestão do Ciclo de Vida da Propriedade Intelectual -->
+            <!-- Slide 9: SGPI: Gestão do Ciclo de Vida da Propriedade Intelectual -->
             <section class="split-slide lifecycle-slide" 
                      data-background-image="assets/background.png" 
                      data-background-opacity="0.1" 
@@ -1079,19 +1099,19 @@
                         <div class="badge-tag">CICLO DE VIDA DO ATIVO</div>
                         
                         <h2 class="slide-title-secondary" style="text-align: left; font-size: 2.1rem !important; line-height: 1.15 !important; margin-bottom: 20px !important;">
-                            PGPI: Gestão do Ciclo de Vida da Propriedade Intelectual
+                            SGPI: Gestão do Ciclo de Vida da Propriedade Intelectual
                         </h2>
                         
                         <h3 class="slide-subtitle-sm">Uma visão integrada da gestão dos ativos intelectuais do IFMG</h3>
                         
                         <div class="narrative-paragraphs narrow">
-                            <p>O PGPI foi concebido para apoiar a gestão da Propriedade Intelectual ao longo de todo o ciclo de vida dos ativos intelectuais, organizando as atividades cotidianas.</p>
+                            <p>O SGPI foi concebido para apoiar a gestão da Propriedade Intelectual ao longo de todo o ciclo de vida dos ativos intelectuais, organizando as atividades cotidianas.</p>
                             <p>Cada processo passa a contar com um histórico estruturado, permitindo acompanhar as ações executadas, os responsáveis designados, os prazos regulamentares, as exigências dos órgãos de proteção e o status atualizado de cada ativo.</p>
                             <p>Essa base unificada fortalece a governança da AGCTIE e prepara as condições operacionais para a futura integração das informações nos ecossistemas de dados institucionais.</p>
                         </div>
                         
                         <div class="highlight-orange-box slide4-box">
-                            "Cada ativo intelectual possui uma <strong>história</strong>. O PGPI permitirá <strong>acompanhar</strong> essa história do <strong>início</strong> ao <strong>fim</strong>."
+                            "Cada ativo intelectual possui uma <strong>história</strong>. O SGPI permitirá <strong>acompanhar</strong> essa história do <strong>início</strong> ao <strong>fim</strong>."
                         </div>
                     </div>
                     
@@ -1101,7 +1121,7 @@
                             
                             <!-- Checklist sub-panel -->
                             <div class="checklist-panel">
-                                <h3>O PGPI permitirá</h3>
+                                <h3>O SGPI permitirá</h3>
                                 <div class="checklist-item">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                         <polyline points="20 6 9 17 4 12"></polyline>
@@ -1177,9 +1197,9 @@
                                     <line x1="220" y1="220" x2="101" y2="120" stroke="rgba(59,130,246,0.12)" stroke-width="1" />
                                 </svg>
                                 
-                                <!-- Central Hub PGPI -->
+                                <!-- Central Hub SGPI -->
                                 <div class="lifecycle-center">
-                                    <h3>PGPI</h3>
+                                    <h3>SGPI</h3>
                                     <span>Gestão do Ciclo de Vida</span>
                                 </div>
                                 
